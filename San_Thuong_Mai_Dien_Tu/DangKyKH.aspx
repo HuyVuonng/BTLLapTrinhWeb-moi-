@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DangNhapKH.aspx.cs" Inherits="San_Thuong_Mai_Dien_Tu.DangNhapKH" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DangKyKH.aspx.cs" Inherits="San_Thuong_Mai_Dien_Tu.DangKyKH" %>
 
 <!DOCTYPE html>
 
@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng Nhập</title>
+    <title>Đăng ký</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="css/main.css">
@@ -20,8 +20,7 @@
     <link href="fonts/fontawesome-free-5.15.3-web/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-      
-        <header class="header" id="header">
+     <header class="header" id="header">
         <div class="grid">
             <nav class="header__navbar ">
 
@@ -78,7 +77,25 @@
                         <a href="" class="header__navbar-item-link"><i
                                 class="header_napa-icon far fa-question-circle"></i>Trợ giúp</a>
                     </li>
-                   
+                    <!-- <li class="header__navbar-item header__navbar-user">
+                        <img src="./assets/img/148819050_978251009372346_2252646809833946081_n.jpg" alt="" class="header__navbar-user-img">
+                        <span class="header__navbar-user-name">Huy Vương</span>
+
+                        <ul class="header__navbar-user-menu">
+                            <li class="header__navbar-user-item">
+                                <a href="">Tài khoản của tôi</a>
+                            </li> 
+                            <li class="header__navbar-user-item">
+                                <a href="">Địa chỉ của tôi</a>
+                            </li>
+                            <li class="header__navbar-user-item">
+                                <a href="">Đơn mua</a>
+                            </li>
+                            <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                <a href="">Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </li> -->
                 </ul>
             </nav>
             <!-- header with search -->
@@ -95,6 +112,7 @@
                         <input type="text" class="header_search-input" id="search"
                             placeholder="Nhập để tìm kiêm sản phẩm">
                     </div>
+                   
 
                     <button class="header_search-btn">
                         <i class="header_search-btn-icon fas fa-search"></i>
@@ -104,7 +122,6 @@
                 <div class="header_cart">
                     <div class="header_cart-wrap">
                         <a href=""><i class="header_cart-icon fas fa-shopping-cart"></i>
-
 
                            
                     </div>
@@ -120,11 +137,10 @@
                         <li class="nav_list_item"><a href="/TrangChu.aspx?modul=DoGiaDung" class="nav_list_item_link">Đồ gia dụng</a></li>
                         <li class="nav_list_item"><a href="/TrangChu.aspx?modul=DoDienTu" class="nav_list_item_link">Đồ điện tử</a></li>
                         <li class="nav_list_item"><a href="/TrangChu.aspx?modul=DoChoTre" class="nav_list_item_link">Đồ cho trẻ</a></li>
-                    </ul>
+                 </ul>
             </div>
         </div>
     </header>
-
 
     <header class="header-mobile">
         <div class="grid wide">
@@ -150,43 +166,67 @@
 
         </div>
     </header>
-
-    <!-- modal-header-->
-    <div class="modal" id="modal">
+    <form id="form1" onsubmit="return checkDK()" runat="server">
+        <div class="modal" id="modal">
         <div class="moda_body">
-            login-form
-            <div class="auth-form" id="auth-form-login">
-                <div class="auth-form_container" id="auth-form_container-login">
+            <!-- register-form -->
+            <div class="auth-form" id="auth-form-register">
+                <div class="auth-form_container" id="auth-form_container-register">
                     <div class="auth-form_header">
-                        <h3 class="auth-form_heading">Đăng Nhập</h3>
-                        <span class="auth-form_swith-btn" id="auth-form_swith-btn-register"><a
-                                class="auth-form_swith-btn-a" href="DangKyKH.aspx">Đăng ký</a></span>
+                        <h3 class="auth-form_heading">Đăng ký</h3>
+                        <span class="auth-form_swith-btn" id="auth-form_swith-btn-login"><a
+                                class="auth-form_swith-btn-a" href="DangNhapKH.aspx">Đăng nhập</a></span>
                     </div>
 
-                   <form id="Form1" name="Form1" method="post" runat="server" >
-                        <div class="auth-form_form">
+                    <div class="auth-form_form">
                         <div class="auth-form_group">
-                            <input type="text" class="auth-form_input" id="Email" name="Email" placeholder="Nhập email của bạn">
+                           <input type="text" class="auth-form_input" id="Ten" name="Ten" placeholder="Nhập họ tên của bạn">
                         </div>
+
+                        
+                        <div class="auth-form_group">
+                           <input type="text" class="auth-form_input" id="SDT" name="SDT" placeholder="Nhập số điện thoại của bạn">
+                        </div>
+
+                        
+                        <div class="auth-form_group">
+                           <input type="text" class="auth-form_input" id="DiaChi" name="DiaChi" placeholder="Nhập địa chỉ của bạn">
+                        </div>
+
+
+
+                        <div class="auth-form_group">
+                            <input type="Email" class="auth-form_input" id="Email" name="Email" placeholder="Nhập email của bạn">
+                            
+                        </div>
+
+
                         <div class="auth-form_group">
                             <input type="password" class="auth-form_input" id="MK" name="MK" placeholder="Nhập mật khẩu của bạn">
+
                         </div>
+
+                        <div class="auth-form_group">
+                            <input type="password" class="auth-form_input" id="NhapLaiMK" placeholder="Nhập lại mật khẩu của bạn">
+
+                        </div>
+
 
                     </div>
 
                     <div class="auth-form_aside">
-                        <div class="auth-form_help">
-                            <a href="/QuenMK.aspx" class="auth-form_help-link auth-form_help-forgot">Quên mật khẩu</a>
-                            <span class="auth-form_help-sparate"></span>
-                            <a href="" class="auth-form_help-link">Cần trợ giúp?</a>
-                        </div>
+                        <p class="auth-form_policy-text">
+                            Bằng việc đăng kí, bạn đã đồng ý với chúng tôi về
+                            <a href="" class="auth-form_text-link">Điều khoản dịch vụ</a> &
+                            <a href="" class="auth-form_text-link">Chính sách bảo mật</a>
+                        </p>
                     </div>
 
                     <div class="auth-form_control">
                         <button class="btn btn-normal auth-form_control-back">TRỞ LẠI</button>
-                        <input type="submit" class="btn btn-primary" name="submit" value="ĐĂNG NHẬP"></input>
+                        <input type="submit" name="submit" class="btn btn-primary" value="Đăng ký"/>
+
                     </div>
-                   </form>
                 </div>
 
                 <div class="social">
@@ -200,10 +240,10 @@
                     </a>
                 </div>
             </div>
-        </div>
-    </div>
 
- 
+           </div>
+        </div>
+    </form>
     <script src="Scripts/app.js"></script>
 </body>
 </html>

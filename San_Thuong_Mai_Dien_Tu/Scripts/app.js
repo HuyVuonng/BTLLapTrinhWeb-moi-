@@ -180,5 +180,27 @@ authFormContainerLogin.addEventListener("click", function (even) {
   even.stopPropagation();
 });
 
+function checkDK() {
+    var ten = document.getElementById("Ten");
+    var sdt = document.getElementById("SDT");
+    var email = document.getElementById("Email");
+    var diachi = document.getElementById("DiaChi");
+    var mk = document.getElementById("MK");
+    var nhaplaiMK = document.getElementById("NhapLaiMK");
+    if (ten.value.trim().length == 0 || sdt.value.trim().length == 0 || email.value.trim().length == 0 || mk.value.trim().length == 0 || nhaplaiMK.value.trim().length == 0 || diachi.value.trim().length == 0) {
+        alert("Hãy nhập đầy đủ thông tin");
+        return false;
+    }
+    if (mk.value != nhaplaiMK.value) {
+        alert("Mật khẩu không khớp");
+        return false;
+    }
+    if (isNaN(sdt.value)) {
+        alert("SDT phải là dạng số");
+        sdt.value = "";
+        sdt.focus();
+    }
+}
+
 
 

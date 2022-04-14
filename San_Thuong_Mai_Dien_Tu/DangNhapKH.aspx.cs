@@ -25,26 +25,38 @@ namespace San_Thuong_Mai_Dien_Tu
 
         private void btnDangNhap_click()
         {
-            var Email = Request.Form["Email"];
-            var MK = Request.Form["MK"];
-            int KH = 0;
-            ArrayList nguoidung
-                = Application[Global.User_LIST] as ArrayList;
-            for (int i = 0; i < nguoidung.Count; i++)
+           if(Request.Form["submit"]== "ĐĂNG NHẬP")
             {
-                NguoiDung item = nguoidung[i] as NguoiDung;
-                if (item.U_MatKhau == MK && item.U_TaiKhoan == Email)
+                var Email = Request.Form["Email"];
+                var MK = Request.Form["MK"];
+                int KH = 0;
+                ArrayList nguoidung
+                    = Application[Global.User_LIST] as ArrayList;
+                for (int i = 0; i < nguoidung.Count; i++)
                 {
-                    KH = 1;
-                    Session["TenKH"] = item.U_HoTen;
+                    NguoiDung item = nguoidung[i] as NguoiDung;
+                    if (item.U_MatKhau == MK && item.U_TaiKhoan == Email)
+                    {
+                        KH = 1;
+                        Session["TenKH"] = item.U_HoTen;
+                    }
+                    else
+                    {
+                        KH = 2;
+                    }
+
                 }
-                
+                if (KH == 1)
+                {
+                    Response.Redirect("/TrangChu.aspx");
+                }
+                else if (KH == 2)
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Tên đăng nhập hoặc mật khẩu sai!')", true);
+
+                }
             }
-            if (KH == 1)
-            {
-                Response.Redirect("/TrangChu.aspx");
-            }
-           
-            }
+
+        }
     }
 }

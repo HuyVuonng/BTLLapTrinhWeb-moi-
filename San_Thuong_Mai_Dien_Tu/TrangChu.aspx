@@ -84,7 +84,7 @@
                          <%if (Session["TenKH"] == null)  %>
                     <% { %>
                     <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate"
-                            id="register"><a class="header__navbar-item header__navbar-item--strong header__navbar-item--separate-a" href="dangky.html">Đăng ký</a></li>   /
+                            id="register"><a class="header__navbar-item header__navbar-item--strong header__navbar-item--separate-a" href="DangKyKH.aspx">Đăng ký</a></li>
                      <li class="header__navbar-item header__navbar-item--strong" id="login"><a class="header__navbar-item header__navbar-item--strong header__navbar-item--separate-a" href="DangNhapKH.aspx">Đăng nhập</a></li>
                     <% } else { %>
                         <li class="header__navbar-item header__navbar-item--strong" id="login"><a class="header__navbar-item header__navbar-item--strong header__navbar-item--separate-a" href="#">Bán hàng</a></li>
@@ -110,16 +110,19 @@
                         </a>
                     </div>
 
-                    <div class="header_search">
+                    <form  style="width: 70%;" method="get" action="TimKiem.aspx">
+                        <div class="header_search">
                         <div class="header_search-input-wrap">
-                            <input type="text" class="header_search-input" id="search" placeholder="Nhập để tìm kiêm sản phẩm">
+                            <input type="text" name="search" class="header_search-input" id="search" placeholder="Nhập để tìm kiêm sản phẩm">
 
                         </div>
 
-                        <button class="header_search-btn">
+                        <button type="submit" name="submit" class="header_search-btn">
                             <i class="header_search-btn-icon fas fa-search"></i>
-                        </button>                 
+                        </button> 
+                            <%--<input  type="submit" name="submit" class="header_search-btn" value="Tìm"/>--%>
                     </div>
+                    </form>
                     <!-- cart -->
                     <div class="header_cart">
                         <div class="header_cart-wrap">

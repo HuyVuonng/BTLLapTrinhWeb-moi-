@@ -8,7 +8,7 @@ namespace Data.Center
     {
         //Fields
         private string m_Ten;
-        private string m_MaSp;
+        private int m_MaSp;
         private decimal m_Gia;
         private string m_Anh;
         private string m_MoTa;
@@ -19,7 +19,7 @@ namespace Data.Center
         //Properties
 
 
-        public ProductItem(string id, string name, decimal price, string imageFile,string mota,int soluong, int malh,int manoiban)
+        public ProductItem(int id, string name, decimal price, string imageFile,string mota,int soluong, int malh,int manoiban)
         {
             this.m_MaSp = id;
             this.m_Ten = name;
@@ -37,7 +37,7 @@ namespace Data.Center
             set { m_Ten = value; }
         }
 
-        public string MaSp
+        public int MaSp
         {
             get { return m_MaSp; }
             set { m_MaSp = value; }
