@@ -139,10 +139,10 @@
 
                     <ul class="nav_list l-12">
                         <li class="nav_list_item"><a href="/TrangChu.aspx" class="nav_list_item_link">Trang chủ</a></li>
-                        <li class="nav_list_item"><a href="/TrangChu.aspx?modul=QuanAo" class="nav_list_item_link">Quần áo</a></li>
-                        <li class="nav_list_item"><a href="/TrangChu.aspx?modul=DoGiaDung" class="nav_list_item_link">Đồ gia dụng</a></li>
-                        <li class="nav_list_item"><a href="/TrangChu.aspx?modul=DoDienTu" class="nav_list_item_link">Đồ điện tử</a></li>
-                        <li class="nav_list_item"><a href="/TrangChu.aspx?modul=DoChoTre" class="nav_list_item_link">Đồ cho trẻ</a></li>
+                        <li class="nav_list_item"><a href="/DanhMuc.aspx?malh=01" class="nav_list_item_link">Quần áo</a></li>
+                        <li class="nav_list_item"><a href="/DanhMuc.aspx?malh=02" class="nav_list_item_link">Đồ gia dụng</a></li>
+                        <li class="nav_list_item"><a href="/DanhMuc.aspx?malh=03" class="nav_list_item_link">Đồ điện tử</a></li>
+                        <li class="nav_list_item"><a href="/DanhMuc.aspx?malh=04" class="nav_list_item_link">Đồ cho trẻ</a></li>
                     </ul>
                 </div>
             </div>

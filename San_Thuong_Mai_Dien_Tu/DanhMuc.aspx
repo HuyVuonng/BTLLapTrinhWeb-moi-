@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TimKiem.aspx.cs" Inherits="San_Thuong_Mai_Dien_Tu.TimKiem" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DanhMuc.aspx.cs" Inherits="San_Thuong_Mai_Dien_Tu.DanhMuc" %>
 
 <!DOCTYPE html>
 
@@ -7,7 +7,7 @@
    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tìm Kiếm</title>
+    <title>Danh mục</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="css/main.css">
@@ -20,7 +20,6 @@
     <link href="fonts/fontawesome-free-5.15.3-web/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-
        <div class="app" id="app">
            <header class="header" id="header">
             <div class="grid">
@@ -137,7 +136,7 @@
                 <div class="header_nav">
 
                     <ul class="nav_list l-12">
-                       <li class="nav_list_item"><a href="/TrangChu.aspx" class="nav_list_item_link">Trang chủ</a></li>
+                        <li class="nav_list_item"><a href="/TrangChu.aspx" class="nav_list_item_link">Trang chủ</a></li>
                         <li class="nav_list_item"><a href="/DanhMuc.aspx?malh=01" class="nav_list_item_link">Quần áo</a></li>
                         <li class="nav_list_item"><a href="/DanhMuc.aspx?malh=02" class="nav_list_item_link">Đồ gia dụng</a></li>
                         <li class="nav_list_item"><a href="/DanhMuc.aspx?malh=03" class="nav_list_item_link">Đồ điện tử</a></li>
@@ -194,7 +193,7 @@
                         <div class="home-product">
                             <div class="grid__row">
 
-                                 <%=HienProductsTimKiem()%>
+                                 <%=HienProductsDanhMuc() %>
 
                             </div>
                         </div>
