@@ -15,6 +15,17 @@ namespace San_Thuong_Mai_Dien_Tu
         protected void Page_Load(object sender, EventArgs e)
         {
             btnDangXuat_click();
+            btnTim_Click();
+        }
+
+        private void btnTim_Click()
+        {
+            if (Request.Form["submit"] == "Tìm")
+            {
+                string tim = Request.Form["search"];
+                Response.Redirect("/TimKiem?SanPham=" + tim + @"");
+            }
+            
         }
 
         private void btnDangXuat_click()
@@ -43,7 +54,7 @@ namespace San_Thuong_Mai_Dien_Tu
                 ProductItem item = alProduct[i] as ProductItem;
                 string tien = Convert.ToDouble(item.Gia).ToString("N0");//Them dau phan cach hang nghin
                 sb.AppendFormat("<div class='grid__colum-2-4 l-2-4 m-4 c-12'>" +
-                    "<a class='home-product-item' href='#'>" +
+                    "<a class='home-product-item' href='#' title='{0}'>" +
                     "<div class='home-product-item__img'style='background-image: url(/img/{1});'></div>" +
                     "<h4 class='home-product-item__name'> {0}</h4><div class='home-product-item-price'>" +
                     "<span class='home-product-item-price-new'>{2}đ</span></div><div class='home-product-item-action'>" +
