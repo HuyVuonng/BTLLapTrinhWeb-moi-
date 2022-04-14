@@ -73,6 +73,7 @@
     <Content Include="css\responsive.css" />
     <Content Include="DangKyKH.aspx" />
     <Content Include="DangNhapKH.aspx" />
+    <Content Include="DanhMuc.aspx" />
     <Content Include="fonts\fontawesome-free-5.15.3-web\attribution.js" />
     <Content Include="fonts\fontawesome-free-5.15.3-web\css\all.css" />
     <Content Include="fonts\fontawesome-free-5.15.3-web\css\all.min.css" />
@@ -1761,6 +1762,13 @@
     </Compile>
     <Compile Include="DangNhapKH.aspx.designer.cs">
       <DependentUpon>DangNhapKH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc.aspx.cs">
+      <DependentUpon>DanhMuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DanhMuc.aspx.designer.cs">
+      <DependentUpon>DanhMuc.aspx</DependentUpon>
     </Compile>
     <Compile Include="Data\ProductItem.cs" />
     <Compile Include="Data\Users.cs" />

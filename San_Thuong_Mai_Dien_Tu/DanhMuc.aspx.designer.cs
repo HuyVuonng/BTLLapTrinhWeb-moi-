@@ -11,7 +11,7 @@ namespace San_Thuong_Mai_Dien_Tu
 {
 
 
-    public partial class TimKiem
+    public partial class DanhMuc
     {
     }
 }

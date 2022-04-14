@@ -23,7 +23,7 @@ namespace San_Thuong_Mai_Dien_Tu
             alProducts.Add(
                 new ProductItem(02, "Áo khoác nam", 1400000m, "aokhoacnam.jpg","Áo khoác",5,01,01));
             alProducts.Add(
-                new ProductItem(03, "Áo trẻ em", 240000m, "aotreem.jpg","Áo trẻ em", 5, 01, 01));
+                new ProductItem(03, "Áo trẻ em", 240000m, "aotreem.jpg","Áo trẻ em", 5, 04, 01));
             alProducts.Add(
                 new ProductItem(04, "Dao làm bếp", 4200000m, "daolambep.jpg", "Dao", 5, 02,02));
             alProducts.Add(
