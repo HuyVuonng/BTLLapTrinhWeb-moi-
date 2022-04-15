@@ -1,5 +1,6 @@
 ﻿using Data.Center;
 using Data.User;
+using Shop.Data;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace San_Thuong_Mai_Dien_Tu
     {
         public const string PRODUCT_LIST = "ProductList";
         public const string User_LIST = "UserList";
+        public const string Shop_LIST = "ShopList";
         protected void Application_Start(object sender, EventArgs e)
         {
             ArrayList alProducts = new ArrayList();
@@ -41,6 +43,15 @@ namespace San_Thuong_Mai_Dien_Tu
             
             //...
             Application[User_LIST] = alUser;
+
+
+
+            ArrayList alShop = new ArrayList();
+            alShop.Add(
+                new ShopList(01,"HuyVuong","vuonghuy12345@gmail.com","123456","03214568798","Hà Nội"));
+
+            //...
+            Application[Shop_LIST] = alShop;
         }
 
         protected void Session_Start(object sender, EventArgs e)

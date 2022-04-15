@@ -201,6 +201,20 @@ function checkDK() {
         sdt.focus();
     }
 }
+function checkDKBanHang() {
+    var ten = document.getElementById("Ten");
+    var sdt = document.getElementById("SDT");
+    var diachi = document.getElementById("DiaChi");
+    if (ten.value.trim().length == 0 || sdt.value.trim().length == 0 || diachi.value.trim().length == 0) {
+        alert("Hãy nhập đầy đủ thông tin");
+        return false;
+    }
+    if (isNaN(sdt.value)) {
+        alert("SDT phải là dạng số");
+        sdt.value = "";
+        sdt.focus();
+    }
+}
 
 
 

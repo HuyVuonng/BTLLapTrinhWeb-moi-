@@ -1,4 +1,5 @@
 ﻿using Data.User;
+using Shop.Data;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,7 +14,8 @@ namespace San_Thuong_Mai_Dien_Tu
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["KhachHang"] = null;
+            Session["Shop"] = null;
+            Session["MaShop"] = null;
             Session["MaKh"] = null;
             Session["TenKH"] = null;
             Session["SDT"] = null;
@@ -39,6 +41,10 @@ namespace San_Thuong_Mai_Dien_Tu
                     {
                         KH = 1;
                         Session["TenKH"] = item.U_HoTen;
+                        Session["SDT"] = item.U_SDT;
+                        Session["sDiaChi"] = item.U_DiaChi;
+                        Session["Email"] = item.U_TaiKhoan;
+                        Session["Mk"] = item.U_MatKhau;
                     }
                     else
                     {
@@ -48,7 +54,23 @@ namespace San_Thuong_Mai_Dien_Tu
                 }
                 if (KH == 1)
                 {
+                    
+
+                    ArrayList shopBan
+                   = Application[Global.Shop_LIST] as ArrayList;
+
+                    for(int i = 0; i < shopBan.Count; i++)
+                    {
+                        ShopList item = shopBan[i] as ShopList;
+                        if(item.S_MatKhau == MK && item.S_TaiKhoan == Email)
+                        {
+                            Session["Shop"] = 1;
+                            Session["MaShop"] = item.S_MaShop;
+                        }
+                    }
+
                     Response.Redirect("/TrangChu.aspx");
+
                 }
                 else if (KH == 2)
                 {
