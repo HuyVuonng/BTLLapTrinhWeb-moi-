@@ -29,8 +29,14 @@ namespace San_Thuong_Mai_Dien_Tu
                 int maShop = shopBan.Count + 1;
 
                 ArrayList alShop = new ArrayList();
+                for(int i = 0; i < shopBan.Count; i++)
+                {
+                    ShopList item = shopBan[i] as ShopList;
+                    alShop.Add(
+                    new ShopList(item.S_MaShop, item.S_TenShop, item.S_TaiKhoan, item.S_SDT, item.S_DiaChi));
+                }
                 alShop.Add(
-                    new ShopList(maShop,Ten, Session["Email"].ToString(), Session["Mk"].ToString(),sdt,DiaChi));
+                    new ShopList(maShop,Ten, Session["Email"].ToString(),sdt,DiaChi));
                 Application[Global.Shop_LIST] = alShop;
                 Session["Shop"] = 1;
                 Session["MaShop"] = maShop;

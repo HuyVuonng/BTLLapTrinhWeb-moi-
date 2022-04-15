@@ -20,7 +20,8 @@ namespace San_Thuong_Mai_Dien_Tu
         {
             if (Request.Form["submit"] == "Xác nhận")
             {
-                int a = 0;
+                int tontai = 0;
+                int khongtontai = 0;
                 string Email = Request.Form["Email"].ToString();
                 string MK = Request.Form["MK"].ToString();
                 ArrayList nguoidung
@@ -30,19 +31,19 @@ namespace San_Thuong_Mai_Dien_Tu
                     NguoiDung item = nguoidung[i] as NguoiDung;
                     if (item.U_TaiKhoan == Email)
                     {
-                        a = 1;
+                        tontai = 1;
                         item.U_MatKhau = MK;
                     }
                     else
                     {
-                        a = 2;
+                        khongtontai += 1;
                     }
                 }
-                if (a == 1)
+                if (tontai==1)
                 {
                     ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Đổi mật khẩu thành công!')", true);
                 }
-                if (a == 2)
+                if (tontai == 0 && khongtontai>=1)
                 {
                     ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Không có tài khoản này')", true);
 

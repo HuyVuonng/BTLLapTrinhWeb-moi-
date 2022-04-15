@@ -11,7 +11,7 @@ namespace San_Thuong_Mai_Dien_Tu
 {
 
 
-    public partial class DanhMuc
+    public partial class ThemSP
     {
 
         /// <summary>

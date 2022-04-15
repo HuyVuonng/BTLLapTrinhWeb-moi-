@@ -16,6 +16,7 @@ namespace San_Thuong_Mai_Dien_Tu
         {
             Session["Shop"] = null;
             Session["MaShop"] = null;
+            Session["TenShop"] = null;
             Session["MaKh"] = null;
             Session["TenKH"] = null;
             Session["SDT"] = null;
@@ -31,7 +32,8 @@ namespace San_Thuong_Mai_Dien_Tu
             {
                 var Email = Request.Form["Email"];
                 var MK = Request.Form["MK"];
-                int KH = 0;
+                int KHco=0;
+                int KHkhong=0;
                 ArrayList nguoidung
                     = Application[Global.User_LIST] as ArrayList;
                 for (int i = 0; i < nguoidung.Count; i++)
@@ -39,7 +41,7 @@ namespace San_Thuong_Mai_Dien_Tu
                     NguoiDung item = nguoidung[i] as NguoiDung;
                     if (item.U_MatKhau == MK && item.U_TaiKhoan == Email)
                     {
-                        KH = 1;
+                        KHco = 1;
                         Session["TenKH"] = item.U_HoTen;
                         Session["SDT"] = item.U_SDT;
                         Session["sDiaChi"] = item.U_DiaChi;
@@ -48,11 +50,11 @@ namespace San_Thuong_Mai_Dien_Tu
                     }
                     else
                     {
-                        KH = 2;
+                        KHkhong =KHkhong + 1;
                     }
 
                 }
-                if (KH == 1)
+                if (KHco == 1)
                 {
                     
 
@@ -62,17 +64,18 @@ namespace San_Thuong_Mai_Dien_Tu
                     for(int i = 0; i < shopBan.Count; i++)
                     {
                         ShopList item = shopBan[i] as ShopList;
-                        if(item.S_MatKhau == MK && item.S_TaiKhoan == Email)
+                        if(item.S_TaiKhoan == Email)
                         {
                             Session["Shop"] = 1;
                             Session["MaShop"] = item.S_MaShop;
+                            Session["TenShop"] = item.S_TenShop;
                         }
                     }
 
                     Response.Redirect("/TrangChu.aspx");
 
                 }
-                else if (KH == 2)
+                else if (KHkhong>0 && KHco==0)
                 {
                     ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Tên đăng nhập hoặc mật khẩu sai!')", true);
 
