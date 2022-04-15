@@ -15,18 +15,10 @@ namespace San_Thuong_Mai_Dien_Tu
         protected void Page_Load(object sender, EventArgs e)
         {
             btnDangXuat_click();
-            btnTim_Click();
-        }
-
-        private void btnTim_Click()
-        {
-            if (Request.Form["submit"] == "Tìm")
-            {
-                string tim = Request.Form["search"];
-                Response.Redirect("/TimKiem?SanPham=" + tim + @"");
-            }
             
         }
+
+        
 
         private void btnDangXuat_click()
         {

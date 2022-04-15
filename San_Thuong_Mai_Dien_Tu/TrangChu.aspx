@@ -87,7 +87,14 @@
                             id="register"><a class="header__navbar-item header__navbar-item--strong header__navbar-item--separate-a" href="DangKyKH.aspx">Đăng ký</a></li>
                      <li class="header__navbar-item header__navbar-item--strong" id="login"><a class="header__navbar-item header__navbar-item--strong header__navbar-item--separate-a" href="DangNhapKH.aspx">Đăng nhập</a></li>
                     <% } else { %>
-                        <li class="header__navbar-item header__navbar-item--strong" id="login"><a class="header__navbar-item header__navbar-item--strong header__navbar-item--separate-a" href="#">Bán hàng</a></li>
+                            <%if (Session["Shop"] == null) %>
+                            <%{ %>
+                        <li class="header__navbar-item header__navbar-item--strong" id="login"><a class="header__navbar-item header__navbar-item--strong header__navbar-item--separate-a" href="DKBanHang.aspx">Bán hàng</a></li>
+                            <%}
+                                else
+                                { %>
+                        <li class="header__navbar-item header__navbar-item--strong" id="login"><a class="header__navbar-item header__navbar-item--strong header__navbar-item--separate-a"href="QuanLyShop.aspx?maShop=<%=Session["MaShop"]%>">Bán hàng</a></li>
+                                <%} %>
                          <li class="header__navbar-item header__navbar-item--strong" id="login"><a class="header__navbar-item header__navbar-item--strong header__navbar-item--separate-a" href="#"> <% =Session["TenKH"].ToString() %></a></li>
                    
                         <form id="form1" runat="server">
