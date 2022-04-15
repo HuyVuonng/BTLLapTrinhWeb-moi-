@@ -32,6 +32,7 @@ namespace San_Thuong_Mai_Dien_Tu
                new ProductItem(05, "Samsung galaxy s20", 20000000m, "SSS20.jpg", "Điện thoại", 5, 03, 03));
             alProducts.Add(
                new ProductItem(06, "Samsung galaxy s22 ultra", 30000000m, "s22ultra.jpg", "Điện thoại", 5, 03, 03));
+
             //...
             Application[PRODUCT_LIST] = alProducts;
 
