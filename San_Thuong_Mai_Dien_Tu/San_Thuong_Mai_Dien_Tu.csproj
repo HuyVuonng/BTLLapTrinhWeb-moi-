@@ -1747,9 +1747,12 @@
     <Content Include="QuanLyShop.aspx" />
     <Content Include="QuenMK.aspx" />
     <Content Include="Scripts\app.js" />
+    <Content Include="SuaSP.aspx" />
+    <Content Include="ThemSP.aspx" />
     <Content Include="TimKiem.aspx" />
     <Content Include="TrangChu.aspx" />
     <Content Include="Web.config" />
+    <Content Include="XoaSP.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DangKyKH.aspx.cs">
@@ -1801,6 +1804,20 @@
     <Compile Include="QuenMK.aspx.designer.cs">
       <DependentUpon>QuenMK.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SuaSP.aspx.cs">
+      <DependentUpon>SuaSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuaSP.aspx.designer.cs">
+      <DependentUpon>SuaSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThemSP.aspx.cs">
+      <DependentUpon>ThemSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThemSP.aspx.designer.cs">
+      <DependentUpon>ThemSP.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TimKiem.aspx.cs">
       <DependentUpon>TimKiem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1814,6 +1831,13 @@
     </Compile>
     <Compile Include="TrangChu.aspx.designer.cs">
       <DependentUpon>TrangChu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XoaSP.aspx.cs">
+      <DependentUpon>XoaSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XoaSP.aspx.designer.cs">
+      <DependentUpon>XoaSP.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

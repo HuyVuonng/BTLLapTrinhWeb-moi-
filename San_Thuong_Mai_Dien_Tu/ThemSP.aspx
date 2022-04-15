@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="QuanLyShop.aspx.cs" Inherits="San_Thuong_Mai_Dien_Tu.QuanLyShop" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ThemSP.aspx.cs" Inherits="San_Thuong_Mai_Dien_Tu.ThemSP" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-   <title>Quản Lý Shop</title>
+     <title>Thêm sản phẩm vào Shop</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
     <link href="fonts/fontawesome-free-5.15.3-web/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-      <form id="form1" runat="server">
+
         <header class="header" id="header">
             <div class="grid">
             <nav class="header__navbar ">
@@ -134,35 +134,70 @@
                 <div class="grid__row app__content">
                     <div class="grid__colum-10 l-12 c-12">
 
-                      <a href="/ThemSP.aspx?maShop=<%=Session["MaShop"] %>" class='Them' style="font-size:16px; color:black;text-decoration:none;">Thêm sản phẩm mới</a>
-                    <table class="tblQuanLyHang">
-                            <tbody>
-                                <tr class="hangtbl">
-                                    <td class=" cotTieuDe cotTenhang">Tên mặt hàng</td>
-                                     <td class="cotTieuDe cotAnhBia">Ảnh bìa</td>
-                                     <td class="cotTieuDe cotMota">Mô tả</td>
-                                     <td class="cotTieuDe cotSoLuong">Số lượng còn</td>
-                                     <td class="cotTieuDe cotGiaban">Giá bán</td>
-                                    <td class="cotTieuDe cotTacvu">Tác vụ</td>
-                                </tr>
+                            <form id="form1" method="post" enctype="multipart/form-data" style="position: relative;top: 50%;" onsubmit="return valid();" runat="server">
+                      <table class="tblThemSP">
+    <tbody>
+        <tr class="tblThemSP_hang">
+            <td class="tblThemSP_cotTieuDe">Loại hàng</td>
+           <td class="tblThemSP_CotNhap">
+               <select id="drlLoaiHang" name="drlLoaiHang">
+                   <option value="1">Quần áo</option>
+                   <option value="2">Đồ gia dụng</option>
+                   <option value="3">Đồ điện tử</option>
+                   <option value="4">Đồ trẻ em</option>
+               </select>
 
-                                <%=HienSPCuaShop() %>
+           </td>
+        </tr>
+        <tr class="tblThemSP_hang">
+            <td class="tblThemSP_cotTieuDe">Tên sản phẩm</td>
+            <td class="tblThemSP_CotNhap">
+                <input type="text" id="txtTenSp" name="txtTenSp" required/>
+            </td>
+        </tr>
+        <tr class="tblThemSP_hang">
+            <td class="tblThemSP_cotTieuDe">Ảnh sản phẩm</td>
+            <td class="tblThemSP_CotNhap">
+                <input type="file" id="fulAnh" name="fulAnh" required/></td>
+        </tr>
+        <tr class="tblThemSP_hang">
+            <td class="tblThemSP_cotTieuDe">Mô tả</td>
+            <td class="tblThemSP_CotNhap">
+                <input type="text" id="txtMota" name="txtMota" required/></td>
+
+        </tr>
+        <tr class="tblThemSP_hang">
+            <td class="tblThemSP_cotTieuDe">Giá</td>
+            <td class="tblThemSP_CotNhap">
+                <input type="text" id="txtGia" name="txtGia" required/>
+          </td>
+
+        </tr>
+        <tr class="tblThemSP_hang">
+            <td class="tblThemSP_cotTieuDe">Số lượng</td>
+            <td class="tblThemSP_CotNhap">
+                  <input type="text" id="txtSoLuong" name="txtSoLuong" required/>
+            </td>
+        </tr>
+        <tr class="tblThemSP_hang">
+            <td class="tblThemSP_cotTieuDe"></td>
+            <td class="tblThemSP_CotNhap_btn">
+                <a class="btn" href="QuanLyShop.aspx">Trở lại"</a>
+                <input type="submit" id="btnThem" name="submit" class="btn btn-primary" value="Thêm"/>
+        </tr>
+    </tbody>
+</table>
+                 </form>
+              
 
                                
                                  
-                            </tbody>
-                        </table>
+                           
 
                     </div>
                 </div>
             </div>
         </div>
-    </form>
-    <script src="Scripts/app.js"></script>
-    <script>
-        function Conform_Delete() {
-            return confirm("Bạn có chắc chắn muốn xóa sản phẩm này khỏi shop không?");
-        }
-    </script>
+
 </body>
 </html>

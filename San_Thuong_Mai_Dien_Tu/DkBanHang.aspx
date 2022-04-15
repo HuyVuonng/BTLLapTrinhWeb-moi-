@@ -189,7 +189,7 @@
                     </div>
 
                     <div class="auth-form_control">
-                        <button class="btn btn-normal auth-form_control-back">TRỞ LẠI</button>
+                        <a href="TrangChu.aspx" class="btn btn-normal auth-form_control-back">TRỞ LẠI</a>
                         <input type="submit" name="submit" class="btn btn-primary" value="Đăng ký"/>
 
                     </div>

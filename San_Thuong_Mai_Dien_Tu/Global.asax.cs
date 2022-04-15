@@ -48,7 +48,7 @@ namespace San_Thuong_Mai_Dien_Tu
 
             ArrayList alShop = new ArrayList();
             alShop.Add(
-                new ShopList(01,"HuyVuong","vuonghuy12345@gmail.com","123456","03214568798","Hà Nội"));
+                new ShopList(01,"HuyVuong","vuonghuy12345@gmail.com","03214568798","Hà Nội"));
 
             //...
             Application[Shop_LIST] = alShop;
