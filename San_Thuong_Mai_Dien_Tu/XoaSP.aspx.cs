@@ -26,19 +26,21 @@ namespace San_Thuong_Mai_Dien_Tu
                     vitri = i;
                 }
             }
-            for (int i = 0; i < vitri; i++)
-            {
-                ProductItem item = Product[i] as ProductItem;
-                alProducts.Add(
-                new ProductItem(item.MaSp, item.Ten, item.Gia, item.Anh, item.MoTa, item.SoLuong, item.MaLh, item.MaNoiBan));
-            }
-            for (int i = vitri+1 ; i < Product.Count ; i++)
-            {
-                ProductItem item = Product[i] as ProductItem;
-                alProducts.Add(
-                new ProductItem(item.MaSp, item.Ten, item.Gia, item.Anh, item.MoTa, item.SoLuong, item.MaLh, item.MaNoiBan));
-            }
-            Application[Global.PRODUCT_LIST] = alProducts;
+            Product.RemoveAt(vitri);
+            //for (int i = 0; i < vitri; i++)
+            //{
+            //    ProductItem item = Product[i] as ProductItem;
+            //    alProducts.Add(
+            //    new ProductItem(item.MaSp, item.Ten, item.Gia, item.Anh, item.MoTa, item.SoLuong, item.MaLh, item.MaNoiBan));
+            //}
+            //for (int i = vitri+1 ; i < Product.Count ; i++)
+            //{
+            //    ProductItem item = Product[i] as ProductItem;
+            //    alProducts.Add(
+            //    new ProductItem(item.MaSp, item.Ten, item.Gia, item.Anh, item.MoTa, item.SoLuong, item.MaLh, item.MaNoiBan));
+            //}
+            //Application[Global.PRODUCT_LIST] = alProducts;
+
             Response.Redirect("/QuanLyShop.aspx");
 
 

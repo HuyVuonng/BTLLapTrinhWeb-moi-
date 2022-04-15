@@ -166,7 +166,7 @@
 
         </div>
     </header>
-    <form id="form1" onsubmit="return checkDK()" runat="server">
+    
         <div class="modal" id="modal">
         <div class="moda_body">
             <!-- register-form -->
@@ -177,7 +177,7 @@
                         <span class="auth-form_swith-btn" id="auth-form_swith-btn-login"><a
                                 class="auth-form_swith-btn-a" href="DangNhapKH.aspx">Đăng nhập</a></span>
                     </div>
-
+                    <form id="form1" onsubmit="return checkDK()" runat="server">
                     <div class="auth-form_form">
                         <div class="auth-form_group">
                            <input type="text" class="auth-form_input" id="Ten" name="Ten" placeholder="Nhập họ tên của bạn">
@@ -244,6 +244,30 @@
            </div>
         </div>
     </form>
+    <script>
+        function checkDK() {
+            var ten = document.getElementById("Ten");
+            var sdt = document.getElementById("SDT");
+            var email = document.getElementById("Email");
+            var diachi = document.getElementById("DiaChi");
+            var mk = document.getElementById("MK");
+            var nhaplaiMK = document.getElementById("NhapLaiMK");
+            if (ten.value.trim().length == 0 || sdt.value.trim().length == 0 || email.value.trim().length == 0 || mk.value.trim().length == 0 || nhaplaiMK.value.trim().length == 0 || diachi.value.trim().length == 0) {
+                alert("Hãy nhập đầy đủ thông tin");
+                return false;
+            }
+            if (mk.value != nhaplaiMK.value) {
+                alert("Mật khẩu không khớp");
+                return false;
+            }
+            if (isNaN(sdt.value)) {
+                alert("SDT phải là dạng số");
+                sdt.value = "";
+                sdt.focus();
+                return false;
+            }
+        }
+    </script>
     <script src="Scripts/app.js"></script>
 </body>
 </html>

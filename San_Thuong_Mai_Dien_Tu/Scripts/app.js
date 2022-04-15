@@ -180,7 +180,7 @@ authFormContainerLogin.addEventListener("click", function (even) {
   even.stopPropagation();
 });
 
-function checkDK() {
+function checkDK(){
     var ten = document.getElementById("Ten");
     var sdt = document.getElementById("SDT");
     var email = document.getElementById("Email");
@@ -199,9 +199,10 @@ function checkDK() {
         alert("SDT phải là dạng số");
         sdt.value = "";
         sdt.focus();
+        return false;
     }
 }
-function checkDKBanHang() {
+function checkDKBanHang(){
     var ten = document.getElementById("Ten");
     var sdt = document.getElementById("SDT");
     var diachi = document.getElementById("DiaChi");
@@ -213,8 +214,50 @@ function checkDKBanHang() {
         alert("SDT phải là dạng số");
         sdt.value = "";
         sdt.focus();
+        return false;
     }
 }
+
+function checkQuenMK() {
+    var email = document.getElementById("Email");
+    var mk = document.getElementById("MK");
+    var nhaplaiMK = document.getElementById("NhapLaiMK");
+    if (email.value.trim().length == 0 || mk.value.trim().length == 0 || nhaplaiMK.value.trim().length == 0) {
+        alert("Hãy nhập đầy đủ thông tin");
+        return false;
+    }
+    if (mk.value != nhaplaiMK.value) {
+        alert("Mật khẩu không khớp");
+        return false;
+    }
+}
+
+function checkDN() {
+    var email = document.getElementById("Email");
+    var mk = document.getElementById("MK");
+    if (email.value.trim().length == 0 || mk.value.trim().length == 0) {
+        alert("Hãy nhập đầy đủ thông tin");
+        return false;
+    }
+}
+
+function checkThemSP() {
+    var gia = document.getElementById("txtGia");
+    var SL = document.getElementById("txtSoLuong");
+    if (isNaN(gia.value)) {
+        alert("Giá phải là dạng số");
+        gia.value = "";
+        gia.focus();
+        return false;
+    }
+    if (isNaN(SL.value)) {
+        alert("Số lượng phải là dạng số");
+        SL.value = "";
+        SL.focus();
+        return false;
+    }
+}
+
 
 
 

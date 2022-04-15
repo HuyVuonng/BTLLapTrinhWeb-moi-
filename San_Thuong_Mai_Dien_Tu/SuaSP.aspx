@@ -132,8 +132,7 @@
             <div class="grid">
                 <div class="grid__row app__content">
                     <div class="grid__colum-10 l-12 c-12">
-
-                            <form id="form1" method="post" enctype="multipart/form-data" style="position: relative;top: 50%;" onsubmit="return valid();" runat="server">
+                            <form id="form1" onsubmit="return checkThemSP()" method="post" enctype="multipart/form-data" style="position: relative;top: 50%;"  runat="server">
                      <%=HienSPSua() %>
                  </form>
               
