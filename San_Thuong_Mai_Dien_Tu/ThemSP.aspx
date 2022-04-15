@@ -134,7 +134,7 @@
                 <div class="grid__row app__content">
                     <div class="grid__colum-10 l-12 c-12">
 
-                            <form id="form1" method="post" enctype="multipart/form-data" style="position: relative;top: 50%;" onsubmit="return valid();" runat="server">
+                            <form id="form1" method="post" enctype="multipart/form-data" style="position: relative;top: 50%;" onsubmit="return checkThemSP();" runat="server">
                       <table class="tblThemSP">
     <tbody>
         <tr class="tblThemSP_hang">
@@ -199,5 +199,23 @@
             </div>
         </div>
 
+    <script>
+        function checkThemSP() {
+            var gia = document.getElementById("txtGia");
+            var SL = document.getElementById("txtSoLuong");
+            if (isNaN(gia.value)) {
+                alert("Giá phải là dạng số");
+                gia.value = "";
+                gia.focus();
+                return false;
+            }
+            if (isNaN(SL.value)) {
+                alert("Số lượng phải là dạng số");
+                SL.value = "";
+                SL.focus();
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>

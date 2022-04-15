@@ -163,7 +163,7 @@
                                 class="auth-form_swith-btn-a" href="DangKyKH.aspx">Đăng ký</a></span>
                     </div>
 
-                   <form id="Form1" name="Form1" method="post" runat="server" >
+                   <form id="Form1" name="Form1" onsubmit="return checkDN()" method="post" runat="server" >
                         <div class="auth-form_form">
                         <div class="auth-form_group">
                             <input type="text" class="auth-form_input" id="Email" name="Email" placeholder="Nhập email của bạn">
@@ -203,7 +203,6 @@
         </div>
     </div>
 
- 
     <script src="Scripts/app.js"></script>
 </body>
 </html>
