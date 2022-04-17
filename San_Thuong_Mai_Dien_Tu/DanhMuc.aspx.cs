@@ -68,7 +68,7 @@ namespace San_Thuong_Mai_Dien_Tu
 
                     string tien = Convert.ToDouble(item.Gia).ToString("N0");//Them dau phan cach hang nghin
                     sb.AppendFormat("<div class='grid__colum-2-4 l-2-4 m-4 c-12'>" +
-                        "<a class='home-product-item' href='#' title='{0}'>" +
+                        "<a class='home-product-item' href='/Chitietsanpham.aspx?maSp={3}' title='{0}'>" +
                         "<div class='home-product-item__img'style='background-image: url(/img/{1});'></div>" +
                         "<h4 class='home-product-item__name'> {0}</h4><div class='home-product-item-price'>" +
                         "<span class='home-product-item-price-new'>{2}đ</span></div><div class='home-product-item-action'>" +
@@ -79,7 +79,7 @@ namespace San_Thuong_Mai_Dien_Tu
                         "<i class='home-product-item_gold fas fa-star'></i>" +
                         "<i class='home-product-item_gold fas fa-star'></i><i class='fas fa-star'></i></div>" +
                         "<span class='home-product-item_sold'>100 đã bán</span></div><div class='home-product-item_favorite'>" +
-                        "<i class='fas fa-check'></i><span>Yêu thích</span> </div></a></div>", item.Ten, item.Anh, tien);
+                        "<i class='fas fa-check'></i><span>Yêu thích</span> </div></a></div>", item.Ten, item.Anh, tien,item.MaSp);
                 }
             }
             return sb.ToString();

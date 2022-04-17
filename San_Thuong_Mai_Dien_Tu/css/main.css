@@ -1433,3 +1433,86 @@ input#DangXuat {
     outline: none;
     border: none;
 }
+/*Chi tiết sản phẩm*/
+.l-6.detail {
+    padding-left: 20px;
+}
+
+span.Product_name {
+    display: block;
+    font-size: 35px;
+    line-height: 35px;
+}
+
+span.giaSp {
+    font-size: 1.6rem;
+}
+
+span.MoTatitle {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+span.motatxt {
+    display: block;
+    margin-left: 16px;
+    font-size: 1.4rem;
+}
+
+.soLuong {
+    display: flex;
+    padding: 15px 0;
+}
+
+span.soluong_title {
+    font-size: 1.6rem;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+input.soluongmua {
+    width: 45px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.gia {
+    display: block;
+    margin: 15px 0;
+}
+
+span.giatitle {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.Mota {
+    margin-bottom: 15px;
+}
+
+.daucong, .dautru {
+    padding: 2px;
+}
+
+    .daucong:hover, .dautru:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+
+.soHangcon {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.btn_ThemVaoGioHang:hover {
+    opacity: 0.7;
+}
+
+span.shopname_title {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+span.shopname {
+    font-size: 1.4rem;
+}
