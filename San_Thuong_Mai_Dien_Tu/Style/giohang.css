@@ -1,14 +1,14 @@
 ﻿
 .main {
-    width: 1000px;
+    padding: 0 20px;
+    display: flex;
+    width: 100%;
     font-size: 16px;
-    margin-top:200px;
+    margin-top: 140px;
     height: 200px;
-   
 }
 
     .main .bang {
-        margin-top: 200px;
         text-align: center;
         width: 100%;
     }
@@ -23,17 +23,13 @@
 }
 
 .main .cart_product {
-    margin-top: 200px;
     width: 70%;
-    float: left;
     height: auto;
     text-align: center;
 }
 
 .main .cart_price {
-    margin-top: 200px;
     width: 30%;
-    float: right;
     background: red;
     height: 100%;
 }

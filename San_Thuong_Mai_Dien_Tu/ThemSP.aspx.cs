@@ -39,15 +39,15 @@ namespace San_Thuong_Mai_Dien_Tu
 
                 ArrayList alProducts = new ArrayList();
 
-                for (int i = 0; i < Product.Count; i++)
-                {
-                    ProductItem item = Product[i] as ProductItem;
-                    alProducts.Add(
-                    new ProductItem(item.MaSp,item.Ten,item.Gia,item.Anh,item.MoTa,item.SoLuong,item.MaLh,item.MaNoiBan));
-                }
-                alProducts.Add(
+                //for (int i = 0; i < Product.Count; i++)
+                //{
+                //    ProductItem item = Product[i] as ProductItem;
+                //    alProducts.Add(
+                //    new ProductItem(item.MaSp,item.Ten,item.Gia,item.Anh,item.MoTa,item.SoLuong,item.MaLh,item.MaNoiBan));
+                //}
+                Product.Add(
                    new ProductItem(maSP, tenSp, gia, anh.FileName, mota, soluong, loaihang, maShop));
-                Application[Global.PRODUCT_LIST] = alProducts;
+                //Application[Global.PRODUCT_LIST] = alProducts;
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Thêm sản phẩm thành công!')", true);
             }
         }
