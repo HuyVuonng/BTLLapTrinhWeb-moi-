@@ -93,5 +93,34 @@ namespace San_Thuong_Mai_Dien_Tu
             }
             return sb.ToString();
         }
+        protected void AddToCartButton(object sender, EventArgs e)
+        {
+
+            if (Session["username"] != null)
+            {
+                string loaihang = Request.QueryString.Get("loaihang");
+                //Store cart to cookies
+                if (Request.Cookies["cart"] == null)
+                {
+                    Response.Cookies["cart"].Value = $"{loaihang},";
+                    Response.Cookies["cart"].Expires = DateTime.Now.AddDays(14);
+                }
+                else
+                {
+
+                    //Store cookies by productID, example: 1,2,3,40,50,... 
+                    Response.Cookies["cart"].Value = Request.Cookies["cart"].Value + $"{loaihang},";
+                    Response.Cookies["cart"].Expires = DateTime.Now.AddDays(14);
+                }
+
+                //Refresh to update cart number
+                //Response.Redirect(Request.Url.ToString());
+                Themgio.InnerHtml = "Thêm thành công";
+            }
+            else
+            {
+                Response.Redirect("DangNhapKH.aspx");
+            }
+        }
     }
 }
