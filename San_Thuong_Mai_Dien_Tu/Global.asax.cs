@@ -19,6 +19,8 @@ namespace San_Thuong_Mai_Dien_Tu
         public const string Shop_LIST = "ShopList";
         protected void Application_Start(object sender, EventArgs e)
         {
+            
+
             ArrayList alProducts = new ArrayList();
             alProducts.Add(
                 new ProductItem(01, "Áo da nam", 1200000m, "aodanam.jpg","Áo da",10,01,01));
@@ -53,8 +55,19 @@ namespace San_Thuong_Mai_Dien_Tu
 
             //...
             Application[Shop_LIST] = alShop;
-        }
 
+           /* //sanpham
+            Application["ProductList"] = new List<Product>();
+            List<Product> ProductList = new List<Product>();
+            //san pham ban 
+            ProductList.Add(new Product() { Id = "1", Images = "../img/aodanam.jpg", Name = "Ao da nam", Price = "500000", Detail = "Ao da nam lich lam cho cac buoi tiec" });
+            ProductList.Add(new Product() { Id = "2", Images = "../img/aokhoacnam.jpg", Name = "Ao khoac nam", Price = "500000", Detail = "Ao khoac nam thoai mai trong cac buoi di choi" });
+            ProductList.Add(new Product() { Id = "3", Images = "../img/aotreem.jpg", Name = "Ao tre em", Price = "1500000", Detail = "Ao tre em mau sac da dang" });
+            ProductList.Add(new Product() { Id = "4", Images = "../img/aodanam.jpg", Name = "Ao da nam", Price = "1000000", Detail = "Ao da nam lich lam cho cac buoi tiec " });
+            ProductList.Add(new Product() { Id = "5", Images = "../img/aodanam.png", Name = "Ao da nam Classico", Price = "2000000", Detail = "Ao da nam lich lam cho cac buoi tiec" });
+            Application["ProductList"] = ProductList;*/
+        }
+      
         protected void Session_Start(object sender, EventArgs e)
         {
 
