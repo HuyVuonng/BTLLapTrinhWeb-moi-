@@ -63,24 +63,6 @@ namespace San_Thuong_Mai_Dien_Tu
         }
 
 
-        public string showDSMember()
-        {
-            ArrayList alMembers = (ArrayList)Application["members"];
-            StringBuilder sb = new StringBuilder();
-            if (alMembers != null)
-            {
-                Member memb = (Member)Session["member"];
-                foreach (Member mem in alMembers)
-                {
-                    if (memb.nickName == mem.nickName)
-                    {
-                        sb.AppendFormat("<p style='color:{0}'><b><u>{1}</u></b></p>", mem.color, mem.nickName);
-
-                    }
-                }
-
-            }
-            return sb.ToString();
-        }
+        
     }
 }

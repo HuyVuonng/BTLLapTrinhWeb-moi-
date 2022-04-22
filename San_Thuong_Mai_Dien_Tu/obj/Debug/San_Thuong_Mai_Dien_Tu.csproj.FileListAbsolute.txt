@@ -1,3 +1,5 @@
+D:\tài liệu kì 2 năm 2\lập trình web\BaiTapLon\San_Thuong_Mai_Dien_Tu\San_Thuong_Mai_Dien_Tu\obj\Debug\San_Thuong_Mai_Dien_Tu.csproj.AssemblyReference.cache
+D:\tài liệu kì 2 năm 2\lập trình web\BaiTapLon\San_Thuong_Mai_Dien_Tu\San_Thuong_Mai_Dien_Tu\obj\Debug\San_Thuong_Mai_Dien_Tu.csproj.CoreCompileInputs.cache
 D:\tài liệu kì 2 năm 2\lập trình web\BaiTapLon\San_Thuong_Mai_Dien_Tu\San_Thuong_Mai_Dien_Tu\bin\San_Thuong_Mai_Dien_Tu.dll.config
 D:\tài liệu kì 2 năm 2\lập trình web\BaiTapLon\San_Thuong_Mai_Dien_Tu\San_Thuong_Mai_Dien_Tu\bin\San_Thuong_Mai_Dien_Tu.dll
 D:\tài liệu kì 2 năm 2\lập trình web\BaiTapLon\San_Thuong_Mai_Dien_Tu\San_Thuong_Mai_Dien_Tu\bin\San_Thuong_Mai_Dien_Tu.pdb
@@ -52,8 +54,6 @@ D:\tài liệu kì 2 năm 2\lập trình web\BaiTapLon\San_Thuong_Mai_Dien_Tu\Sa
 D:\tài liệu kì 2 năm 2\lập trình web\BaiTapLon\San_Thuong_Mai_Dien_Tu\San_Thuong_Mai_Dien_Tu\bin\roslyn\VBCSCompiler.exe.config
 D:\tài liệu kì 2 năm 2\lập trình web\BaiTapLon\San_Thuong_Mai_Dien_Tu\San_Thuong_Mai_Dien_Tu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\tài liệu kì 2 năm 2\lập trình web\BaiTapLon\San_Thuong_Mai_Dien_Tu\San_Thuong_Mai_Dien_Tu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\tài liệu kì 2 năm 2\lập trình web\BaiTapLon\San_Thuong_Mai_Dien_Tu\San_Thuong_Mai_Dien_Tu\obj\Debug\San_Thuong_Mai_Dien_Tu.csproj.CoreCompileInputs.cache
 D:\tài liệu kì 2 năm 2\lập trình web\BaiTapLon\San_Thuong_Mai_Dien_Tu\San_Thuong_Mai_Dien_Tu\obj\Debug\San_Thuong_Mai_Dien_Tu.csproj.CopyComplete
 D:\tài liệu kì 2 năm 2\lập trình web\BaiTapLon\San_Thuong_Mai_Dien_Tu\San_Thuong_Mai_Dien_Tu\obj\Debug\San_Thuong_Mai_Dien_Tu.dll
 D:\tài liệu kì 2 năm 2\lập trình web\BaiTapLon\San_Thuong_Mai_Dien_Tu\San_Thuong_Mai_Dien_Tu\obj\Debug\San_Thuong_Mai_Dien_Tu.pdb
-D:\tài liệu kì 2 năm 2\lập trình web\BaiTapLon\San_Thuong_Mai_Dien_Tu\San_Thuong_Mai_Dien_Tu\obj\Debug\San_Thuong_Mai_Dien_Tu.csproj.AssemblyReference.cache
