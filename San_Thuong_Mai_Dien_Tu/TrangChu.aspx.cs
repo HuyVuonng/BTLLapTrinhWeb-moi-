@@ -43,7 +43,7 @@ namespace San_Thuong_Mai_Dien_Tu
             
             for (int i = 0; i < alProduct.Count; i++)
             {
-                ProductItem item = alProduct[i] as ProductItem;
+                Data.Center.ProductItem item = alProduct[i] as Data.Center.ProductItem;
                 string tien = Convert.ToDouble(item.Gia).ToString("N0");//Them dau phan cach hang nghin
                 sb.AppendFormat("<div class='grid__colum-2-4 l-2-4 m-4 c-12'>" +
                     "<a class='home-product-item' href='/Chitietsanpham.aspx?maSp={3}' title='{0}'>" +

@@ -1,14 +1,14 @@
 ﻿
+
 .main {
-    width: 1000px;
+    width: 100%;
     font-size: 16px;
-    margin-top:200px;
-    height: 200px;
-   
+    margin: 30px 0px 0px 0px;
+    padding: 0;
+    height: auto;
 }
 
     .main .bang {
-        margin-top: 200px;
         text-align: center;
         width: 100%;
     }
@@ -17,13 +17,11 @@
     border-collapse: collapse;
 }**/
 .td1 {
-    margin-top: 200px;
     width: 150px;
     height: 150px;
 }
 
 .main .cart_product {
-    margin-top: 200px;
     width: 70%;
     float: left;
     height: auto;
@@ -31,7 +29,6 @@
 }
 
 .main .cart_price {
-    margin-top: 200px;
     width: 30%;
     float: right;
     background: red;
@@ -54,7 +51,6 @@
 
 /*---------Thanh toán--------*/
 .main .cart_price {
-
     width: 30%;
     height: 350px;
     border-radius: 8px;
@@ -90,11 +86,3 @@
     border-radius: 4px;
     border: 0px;
 }
-/*.main .cart--right .cart__product-price-unit {
-    margin:15px;
-}*/
-
-.footer {
-    margin-top: 200px;
-}
-

@@ -69,5 +69,8 @@ namespace Data.Center
             get { return m_MaNoiBan; }
             set { m_MaNoiBan = value; }
         }
+
+        public string Id { get; internal set; }
+        public string Price { get; internal set; }
     }
 }

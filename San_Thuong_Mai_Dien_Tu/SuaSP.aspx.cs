@@ -22,7 +22,7 @@ namespace San_Thuong_Mai_Dien_Tu
 
             for (int i = 0; i < Product.Count; i++)
             {
-                ProductItem item = Product[i] as ProductItem;
+                Data.Center.ProductItem item = Product[i] as Data.Center.ProductItem;
                 if (item.MaSp == ma)
                 {
                     anhcu = item.Anh.ToString();
@@ -60,7 +60,7 @@ namespace San_Thuong_Mai_Dien_Tu
 
                 for (int i = 0; i < Product.Count; i++)
                 {
-                    ProductItem item = Product[i] as ProductItem;
+                    Data.Center.ProductItem item = Product[i] as Data.Center.ProductItem;
                     if (item.MaSp == ma)
                     {
                         
@@ -86,7 +86,7 @@ namespace San_Thuong_Mai_Dien_Tu
             ma = Convert.ToInt32(Request.QueryString["maSp"]);
             for (int i = 0; i < alProduct.Count; i++)
             {
-                ProductItem item = alProduct[i] as ProductItem;
+                Data.Center.ProductItem item = alProduct[i] as Data.Center.ProductItem;
                 if(item.MaSp== ma)
                 {
                     

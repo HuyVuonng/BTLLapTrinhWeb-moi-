@@ -23,17 +23,17 @@ namespace San_Thuong_Mai_Dien_Tu
 
             ArrayList alProducts = new ArrayList();
             alProducts.Add(
-                new ProductItem(01, "Áo da nam", 1200000m, "aodanam.jpg","Áo da",10,01,01));
+                new Data.Center.ProductItem(01, "Áo da nam", 1200000m, "aodanam.jpg","Áo da",10,01,01));
             alProducts.Add(
-                new ProductItem(02, "Áo khoác nam", 1400000m, "aokhoacnam.jpg","Áo khoác",5,01,01));
+                new Data.Center.ProductItem(02, "Áo khoác nam", 1400000m, "aokhoacnam.jpg","Áo khoác",5,01,01));
             alProducts.Add(
-                new ProductItem(03, "Áo trẻ em", 240000m, "aotreem.jpg","Áo trẻ em", 5, 04, 01));
+                new Data.Center.ProductItem(03, "Áo trẻ em", 240000m, "aotreem.jpg","Áo trẻ em", 5, 04, 01));
             alProducts.Add(
-                new ProductItem(04, "Dao làm bếp", 4200000m, "daolambep.jpg", "Dao", 5, 02,02));
+                new Data.Center.ProductItem(04, "Dao làm bếp", 4200000m, "daolambep.jpg", "Dao", 5, 02,02));
             alProducts.Add(
-               new ProductItem(05, "Samsung galaxy s20", 20000000m, "SSS20.jpg", "Điện thoại", 5, 03, 03));
+               new Data.Center.ProductItem(05, "Samsung galaxy s20", 20000000m, "SSS20.jpg", "Điện thoại", 5, 03, 03));
             alProducts.Add(
-               new ProductItem(06, "Samsung galaxy s22 ultra", 30000000m, "s22ultra.jpg", "Điện thoại", 5, 03, 03));
+               new Data.Center.ProductItem(06, "Samsung galaxy s22 ultra", 30000000m, "s22ultra.jpg", "Điện thoại", 5, 03, 03));
 
             //...
             Application[PRODUCT_LIST] = alProducts;

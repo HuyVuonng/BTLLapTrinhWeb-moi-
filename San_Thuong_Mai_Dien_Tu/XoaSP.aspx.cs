@@ -20,7 +20,7 @@ namespace San_Thuong_Mai_Dien_Tu
             ArrayList alProducts = new ArrayList();
             for (int i = 0; i < Product.Count; i++)
             {
-                ProductItem item = Product[i] as ProductItem;
+                Data.Center.ProductItem item = Product[i] as Data.Center.ProductItem;
                 if (item.MaSp == maSp)
                 {
                     vitri = i;

@@ -41,12 +41,12 @@ namespace San_Thuong_Mai_Dien_Tu
 
                 for (int i = 0; i < Product.Count; i++)
                 {
-                    ProductItem item = Product[i] as ProductItem;
+                    Data.Center.ProductItem item = Product[i] as Data.Center.ProductItem;
                     alProducts.Add(
-                    new ProductItem(item.MaSp,item.Ten,item.Gia,item.Anh,item.MoTa,item.SoLuong,item.MaLh,item.MaNoiBan));
+                    new Data.Center.ProductItem(item.MaSp, item.Ten, item.Gia, item.Anh, item.MoTa, item.SoLuong, item.MaLh, item.MaNoiBan));
                 }
                 alProducts.Add(
-                   new ProductItem(maSP, tenSp, gia, anh.FileName, mota, soluong, loaihang, maShop));
+                   new Data.Center.ProductItem(maSP, tenSp, gia, anh.FileName, mota, soluong, loaihang, maShop));
                 Application[Global.PRODUCT_LIST] = alProducts;
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Thêm sản phẩm thành công!')", true);
             }

@@ -34,7 +34,7 @@ namespace San_Thuong_Mai_Dien_Tu
 
             for (int i = 0; i < alProduct.Count; i++)
             {
-                ProductItem item = alProduct[i] as ProductItem;
+                Data.Center.ProductItem item = alProduct[i] as Data.Center.ProductItem;
 
                 if (item.MaSp == Convert.ToInt32(maSP))
                 {
@@ -55,7 +55,7 @@ namespace San_Thuong_Mai_Dien_Tu
 
             for (int i = 0; i < alProduct.Count; i++)
             {
-                ProductItem item = alProduct[i] as ProductItem;
+                Data.Center.ProductItem item = alProduct[i] as Data.Center.ProductItem;
                 
                 if (item.MaSp== Convert.ToInt32(maSP))
                 {
@@ -119,7 +119,7 @@ namespace San_Thuong_Mai_Dien_Tu
             }
             else
             {
-                Response.Redirect("DangNhapKH.aspx");
+                Response.Redirect("DangKyKH.aspx");
             }
         }
     }

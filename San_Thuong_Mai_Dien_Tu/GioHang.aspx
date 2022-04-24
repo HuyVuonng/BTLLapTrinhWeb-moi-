@@ -18,12 +18,12 @@
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/responsive.css">
-    
+    <link rel ="stylesheet"href="Style/giohang.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="fonts/fontawesome-free-5.15.3-web/css/all.min.css" rel="stylesheet" />
-     <link rel ="stylesheet"href="Style/giohang.css" />
+     
 </head>
 <body>
     
