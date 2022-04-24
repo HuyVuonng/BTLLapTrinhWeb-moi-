@@ -39,6 +39,7 @@ namespace San_Thuong_Mai_Dien_Tu
 
                 ArrayList alProducts = new ArrayList();
 
+<<<<<<< HEAD
                 for (int i = 0; i < Product.Count; i++)
                 {
                     Data.Center.ProductItem item = Product[i] as Data.Center.ProductItem;
@@ -48,6 +49,17 @@ namespace San_Thuong_Mai_Dien_Tu
                 alProducts.Add(
                    new Data.Center.ProductItem(maSP, tenSp, gia, anh.FileName, mota, soluong, loaihang, maShop));
                 Application[Global.PRODUCT_LIST] = alProducts;
+=======
+                //for (int i = 0; i < Product.Count; i++)
+                //{
+                //    ProductItem item = Product[i] as ProductItem;
+                //    alProducts.Add(
+                //    new ProductItem(item.MaSp,item.Ten,item.Gia,item.Anh,item.MoTa,item.SoLuong,item.MaLh,item.MaNoiBan));
+                //}
+                Product.Add(
+                   new ProductItem(maSP, tenSp, gia, anh.FileName, mota, soluong, loaihang, maShop));
+                //Application[Global.PRODUCT_LIST] = alProducts;
+>>>>>>> ec0d8d1f5b1d24848e08a6aef5b9be4e1c915a4e
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Thêm sản phẩm thành công!')", true);
             }
         }

@@ -48,15 +48,15 @@ namespace San_Thuong_Mai_Dien_Tu
                     int maKH = nguoidung.Count + 1;
 
                     ArrayList alUser = new ArrayList();
-                    for (int i = 0; i < nguoidung.Count; i++)
-                    {
-                        NguoiDung item = nguoidung[i] as NguoiDung;
-                        _ = alUser.Add(
-                       new NguoiDung(item.U_maKH,item.U_HoTen ,item.U_TaiKhoan, item.U_MatKhau, item.U_SDT, item.U_DiaChi));
-                    }
-                    alUser.Add(
+                    //for (int i = 0; i < nguoidung.Count; i++)
+                    //{
+                    //    NguoiDung item = nguoidung[i] as NguoiDung;
+                    //    _ = alUser.Add(
+                    //   new NguoiDung(item.U_maKH,item.U_HoTen ,item.U_TaiKhoan, item.U_MatKhau, item.U_SDT, item.U_DiaChi));
+                    //}
+                    nguoidung.Add(
                        new NguoiDung(maKH, Ten, Email, MK, sdt, DiaChi));
-                    Application[Global.User_LIST] = alUser;
+                    //Application[Global.User_LIST] = alUser;
                     ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Đăng ký thành công!')", true);
                 }
                 if (tontai == 1)

@@ -117,6 +117,9 @@
     .register-login-mobile{
         border-top: 1px solid black;
     }
+    span.Product_name {
+        margin-top:15px;
+    }
 }
 
 /*mobile*/
