@@ -34,28 +34,32 @@ namespace San_Thuong_Mai_Dien_Tu
         {
 
             if (Request.QueryString["submit"] == "Thêm vào giỏ hàng") {
-                int SLMua;
-            int maKH = Convert.ToInt32(Session["MaKh"].ToString());
-            SLMua = Convert.ToInt32(Request.Form["soluongmua"]);
-            ArrayList alProduct
-            = Application[Global.PRODUCT_LIST] as ArrayList;
-            ArrayList alCart
-            = Application[Global.Cart_LIST] as ArrayList;
-            for (int i = 0; i < alProduct.Count; i++)
-            {
-                ProductItem item = alProduct[i] as ProductItem;
-                if (item.MaSp == int.Parse(Session["maSpMua"].ToString()))
+                if (Session["MaKh"]!=null)
                 {
-                    alCart.Add(
-                            new CartItem(item.MaSp, item.Ten, item.Gia, item.Anh, SLMua, maKH));
-                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Đã thêm sản phẩm vào giỏ hàng')", true);
+                    int SLMua;
+                    int maKH = Convert.ToInt32(Session["MaKh"].ToString());
+                    SLMua = Convert.ToInt32(Request.Form["soluongmua"]);
+                    ArrayList alProduct
+                    = Application[Global.PRODUCT_LIST] as ArrayList;
+                    ArrayList alCart
+                    = Application[Global.Cart_LIST] as ArrayList;
+                    for (int i = 0; i < alProduct.Count; i++)
+                    {
+                        ProductItem item = alProduct[i] as ProductItem;
+                        if (item.MaSp == int.Parse(Session["maSpMua"].ToString()))
+                        {
+                            alCart.Add(
+                                    new CartItem(item.MaSp, item.Ten, item.Gia, item.Anh, SLMua, maKH));
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Đã thêm sản phẩm vào giỏ hàng')", true);
+                        }
+                    }
                 }
-            }
-        }    
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Bạn cần đăng nhập và tài khoản của mình để thêm vào giỏ hàng')", true);
+                }
+            }    
 
-                
-            
-            
         }
 
 
