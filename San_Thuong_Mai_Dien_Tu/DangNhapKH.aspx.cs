@@ -44,6 +44,7 @@ namespace San_Thuong_Mai_Dien_Tu
                         KHco = 1;
                         Session["TenKH"] = item.U_HoTen;
                         Session["SDT"] = item.U_SDT;
+                        Session["MaKh"] = item.U_maKH;
                         Session["sDiaChi"] = item.U_DiaChi;
                         Session["Email"] = item.U_TaiKhoan;
                         Session["Mk"] = item.U_MatKhau;

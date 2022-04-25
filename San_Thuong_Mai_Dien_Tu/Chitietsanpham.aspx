@@ -126,7 +126,7 @@
                     <!-- cart -->
                     <div class="header_cart">
                         <div class="header_cart-wrap">
-                            <a href=""><i class="header_cart-icon fas fa-shopping-cart"></i>
+                            <a href="GioHang.aspx"><i class="header_cart-icon fas fa-shopping-cart"></i>
                                 <span class="header_cart-notice">3</span></a>
 
                             
@@ -185,12 +185,12 @@
                   
                     <div class="grid__colum-10 l-12 c-12">
                         <h1 class="title_page" style="margin-top: 30px;">Thông tin sản phẩm</h1>
-                          <form>
+                          <form id="form2" >
                               <div class="product_detail">
                             <div class="grid__row">
                                 
                                     <%=HienDetailProducts() %>
-  
+                            
                             </div>
                         </div>
                            </form>
