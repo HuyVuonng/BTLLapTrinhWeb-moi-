@@ -33,15 +33,6 @@ namespace San_Thuong_Mai_Dien_Tu
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl sogiohang;
 
         /// <summary>
-        /// ListViewCart control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListViewCart;
-
-        /// <summary>
         /// products_price control.
         /// </summary>
         /// <remarks>

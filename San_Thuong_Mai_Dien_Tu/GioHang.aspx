@@ -163,16 +163,9 @@
 							<th>Giá</th>
 							<th>Tác vụ</th>
 						</tr>
-			<asp:ListView ID="ListViewCart" runat="server">
-				<ItemTemplate>
-						<tr>
-							<td class="td1"><img src= "<%# Eval("Images") %>" class="anh" /></td>
-							<td><p><%# Eval("Name") %></p></td>
-							<td><p><%# Eval("Price") %> đồng</p></td>
-							<td><a href="Xoagiohang.aspx?id=<%#Eval("Id")%>" class="xoa"><button class="xoa">Xóa</button></a></td>
-						</tr>
-				</ItemTemplate>
-			</asp:ListView>
+                    <%=HienCart() %>
+						
+
 			</table>
 		</div>
 		<div class="cart_price">

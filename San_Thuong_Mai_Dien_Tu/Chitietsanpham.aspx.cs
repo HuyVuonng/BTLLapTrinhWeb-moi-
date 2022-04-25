@@ -1,4 +1,5 @@
-﻿using Data.Center;
+﻿using Cart.Data;
+using Data.Center;
 using Shop.Data;
 using System;
 using System.Collections;
@@ -20,9 +21,46 @@ namespace San_Thuong_Mai_Dien_Tu
         {
             if (!IsPostBack)
             {
-                maSP = Request.QueryString["maSp"];
+                if (Request.QueryString["maSp"]!=null)
+                {
+                    maSP = Request.QueryString["maSp"];
+                    Session["maSpMua"] = maSP;
+                }
             }
+            btnThemVaoGioHang_click();
         }
+
+        private void btnThemVaoGioHang_click()
+        {
+
+            if (Request.QueryString["submit"] == "Thêm vào giỏ hàng") {
+                int SLMua;
+            int maKH = Convert.ToInt32(Session["MaKh"].ToString());
+            SLMua = Convert.ToInt32(Request.Form["soluongmua"]);
+            ArrayList alProduct
+            = Application[Global.PRODUCT_LIST] as ArrayList;
+            ArrayList alCart
+            = Application[Global.Cart_LIST] as ArrayList;
+            for (int i = 0; i < alProduct.Count; i++)
+            {
+                ProductItem item = alProduct[i] as ProductItem;
+                if (item.MaSp == int.Parse(Session["maSpMua"].ToString()))
+                {
+                    alCart.Add(
+                            new CartItem(item.MaSp, item.Ten, item.Gia, item.Anh, SLMua, maKH));
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Đã thêm sản phẩm vào giỏ hàng')", true);
+                }
+            }
+        }    
+
+                
+            
+            
+        }
+
+
+
+
 
         public string HienDetailProducts()
         {
@@ -36,7 +74,7 @@ namespace San_Thuong_Mai_Dien_Tu
             {
                 ProductItem item = alProduct[i] as ProductItem;
 
-                if (item.MaSp == Convert.ToInt32(maSP))
+                if (item.MaSp ==int.Parse(Session["maSpMua"].ToString()))
                 {
                     maShop = item.MaNoiBan;
                 }
@@ -57,7 +95,7 @@ namespace San_Thuong_Mai_Dien_Tu
             {
                 ProductItem item = alProduct[i] as ProductItem;
                 
-                if (item.MaSp== Convert.ToInt32(maSP))
+                if (item.MaSp== int.Parse(Session["maSpMua"].ToString()))
                 {
                     string tien = Convert.ToDouble(item.Gia).ToString("N0");//Them dau phan cach hang nghin
                     sb.AppendFormat("<div class='l-6 m-12 c-12'>" +
@@ -79,48 +117,20 @@ namespace San_Thuong_Mai_Dien_Tu
                         "<div class='soLuong'>" +
                         "<span class='soluong_title'>Số lượng:</span>" +
                         "<div class='dautru' id='dautru' onclick='BotSLSP()'><i class='fa-solid fa-minus'></i></div>" +
-                        "<input type = 'text' class='soluongmua' value='1' id='soluongmua' onchange='chekSLban()'>" +
+                        "<input type = 'text' name='soluongmua' class='soluongmua' value='1' id='soluongmua' onchange='chekSLban()'>" +
                         "<div class='daucong' id='daucong' onclick='themSLSP()'><i class='fa-solid fa-plus'></i></i></div>  " +
                         "</div>" +
                         "<div class='soHangcon'>" +
                         "<span class='soluongcon_title'>Lượng sản phẩm còn: </span>" +
                         "<span class='soluongcon_value' id='soluongcon'>{4}</span>" +
                         "</div>" +
-                        "<input type = 'button' value='Thêm vào giỏ hàng' class='btn btn-primary btn_ThemVaoGioHang'>" +
+                        "<input type = 'submit' name='submit' id='submit' value='Thêm vào giỏ hàng' class='btn btn-primary btn_ThemVaoGioHang'>" +
                         "</div>",item.Anh, item.Ten, tien, item.MoTa,item.SoLuong,tenShop);
                 }
                 
             }
             return sb.ToString();
         }
-        protected void AddToCartButton(object sender, EventArgs e)
-        {
-
-            if (Session["username"] != null)
-            {
-                string loaihang = Request.QueryString.Get("loaihang");
-                //Store cart to cookies
-                if (Request.Cookies["cart"] == null)
-                {
-                    Response.Cookies["cart"].Value = $"{loaihang},";
-                    Response.Cookies["cart"].Expires = DateTime.Now.AddDays(14);
-                }
-                else
-                {
-
-                    //Store cookies by productID, example: 1,2,3,40,50,... 
-                    Response.Cookies["cart"].Value = Request.Cookies["cart"].Value + $"{loaihang},";
-                    Response.Cookies["cart"].Expires = DateTime.Now.AddDays(14);
-                }
-
-                //Refresh to update cart number
-                //Response.Redirect(Request.Url.ToString());
-                Themgio.InnerHtml = "Thêm thành công";
-            }
-            else
-            {
-                Response.Redirect("DangNhapKH.aspx");
-            }
-        }
+        
     }
 }
