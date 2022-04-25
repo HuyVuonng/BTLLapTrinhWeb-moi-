@@ -87,16 +87,16 @@
                     <% } else { %>
                             <%if (Session["Shop"] == null) %>
                             <%{ %>
-                        <li class="header__navbar-item header__navbar-item--strong" id="login"><a class="header__navbar-item header__navbar-item--strong header__navbar-item--separate-a" href="DKBanHang.aspx">Bán hàng</a></li>
+                        <li class="header__navbar-item header__navbar-item--strong" ><a class="header__navbar-item header__navbar-item--strong header__navbar-item--separate-a" href="DKBanHang.aspx">Bán hàng</a></li>
                             <%}
                                 else
                                 { %>
-                        <li class="header__navbar-item header__navbar-item--strong" id="login"><a class="header__navbar-item header__navbar-item--strong header__navbar-item--separate-a"href="QuanLyShop.aspx?maShop=<%=Session["MaShop"]%>">Bán hàng</a></li>
+                        <li class="header__navbar-item header__navbar-item--strong" ><a class="header__navbar-item header__navbar-item--strong header__navbar-item--separate-a"href="QuanLyShop.aspx?maShop=<%=Session["MaShop"]%>">Bán hàng</a></li>
                                 <%} %>
                          <li class="header__navbar-item header__navbar-item--strong" id="login"><a class="header__navbar-item header__navbar-item--strong header__navbar-item--separate-a" href="#"> <% =Session["TenKH"].ToString() %></a></li>
                    
                         <form id="form1" runat="server">
-                            <li class="header__navbar-item header__navbar-item--strong" id="login">
+                            <li class="header__navbar-item header__navbar-item--strong" >
                                 <input type="submit" id="DangXuat" name="submit" class="header__navbar-item header__navbar-item--strong header__navbar-item--separate-a" value="Đăng xuất"></input></li>
                         </form>
                          
@@ -185,7 +185,7 @@
                   
                     <div class="grid__colum-10 l-12 c-12">
                         <h1 class="title_page" style="margin-top: 30px;">Thông tin sản phẩm</h1>
-                          <form id="form2" >
+                          <form id="form2" onsubmit="return checkDNThemSP()">
                               <div class="product_detail">
                             <div class="grid__row">
                                 
@@ -374,6 +374,16 @@
                 soluongmua.value=soluongcon.innerHTML;
             }
 
+        }
+
+        function checkDNThemSP() {
+            var tk = document.getdocument.getElementById("login");
+            if (tk.value == "Đăng nhập") {
+                alert("Bạn cần đăng nhập vào tài khoản để thêm sản phẩm này vào giỏ hàng");
+                return false;
+            }
+           
+            
         }
 
     </script>
